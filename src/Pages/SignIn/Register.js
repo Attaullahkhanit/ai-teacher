@@ -36,7 +36,7 @@ function Register() {
 
                         <form className="mx-1 mx-md-4 p-3 ">
                         <p className="text-center h3 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-
+ 
                           <div className="d-flex flex-row align-items-center mb-4">
                             <FaUserPlus size={25} style={{color: '#273661'}}/>
                             <div className="form-outline flex-fill mx-2 mb-0">

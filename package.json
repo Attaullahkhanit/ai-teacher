@@ -16,6 +16,7 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4",
     "jquery": "^3.6.4",
+    "mdb-react-ui-kit": "^6.0.0",
     "openai": "^3.2.1",
     "pdfmake": "^0.2.7",
     "popper": "^1.0.1",
@@ -54,7 +55,7 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.10.0",
+    "react-router-dom": "^6.11.0",
     "tailwindcss": "^3.3.1"
   }
 }

@@ -1,19 +1,20 @@
 import React from 'react';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { ImDownload, ImDownload3 } from 'react-icons/im';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-const PDFGenerator = () => {
+const PDFGenerator = (props) => {
   const generatePDF = () => {
     const docDefinition = {
       content: [
         {
-          text: 'Sample PDF with Styling',
+          text: "Teaching Copilot.com",
           style: 'header'
         },
         {
-          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          text: props.content,
           style: 'body'
         }
       ],
@@ -33,10 +34,8 @@ const PDFGenerator = () => {
     pdfMake.createPdf(docDefinition).open();
   };
 
-  return (
-    <button onClick={generatePDF}>
-      Generate PDF
-    </button>
+  return ( 
+       <ImDownload3 onClick={generatePDF} className='fs-2 text-info pb-2 ' style={{float:"right"}}/> 
   );
 };
 

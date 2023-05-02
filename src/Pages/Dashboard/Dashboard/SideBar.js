@@ -1,6 +1,6 @@
 import React from 'react'
 import './Dashboard.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -18,6 +18,16 @@ function SideBar() {
     const handleClose = () => {
       setAnchorEl(null);
     };
+    
+    const navigate = useNavigate()
+
+    const goToSignin = () => {
+        localStorage.removeItem('status');
+        navigate('/signin')
+    }
+    const goToContactUs = () => {
+        navigate('/contact')
+    }
     
   return (
     <>
@@ -41,38 +51,10 @@ function SideBar() {
                             </Link>
                         </li>
                         <li className='nav-item text-white  my-1'>
-
-                        <div className='ml-2'>
-                            <Button
-                                id="basic-button"
-                                aria-controls={open ? 'basic-menu' : undefined}
-                                aria-haspopup="true"
-                                underline="none"
-                                aria-expanded={open ? 'true' : undefined}
-                                onClick={handleClick}
-                                style={{textDecoration: 'none', fontSize: '16px', width:'100%', textAlign: 'left', justifyContent: 'left', paddingLeft: '17px'}}
-                            >
-                                <Link to="/profile" className='text-decoration-none'>
-                                    <i className='bi bi-person-circle text-white'></i>
-                                    <span className='ms-2 text-white d-none d-sm-inline text-capitalize menuitemfont'>PROFILE</span>
-                                </Link>
-                            </Button>
-                            <Menu
-                                id="basic-menu"
-                                style={{height: 'auto', width: '100%'}}
-                                className=''
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                                }}
-                            >
-                                <MenuItem className="text-secondary" onClick={handleClose}>My account</MenuItem>
-                                <MenuItem className="text-secondary" onClick={handleClose}>Logout</MenuItem>
-                            </Menu>
-                            </div>
-
+                            <Link to="/profile" className='nav-link text-white dashboardmenulink' aria-current="page">
+                            <i className='bi bi-person-circle text-white'></i>
+                            <span className='ms-2 text-white d-none d-sm-inline menuitemfont'>PROFILE</span>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -87,14 +69,19 @@ function SideBar() {
                             <span className='ms-2 text-white d-none d-sm-inline menuitemfont'>PRO UPGRADE</span>
                             </Link>
                         </li>
-                    </ul>
-
-                    <ul className='nav nav-pills flex-column text-right '>
+                    
                         <li className='nav-item text-white  my-1'>
-                            <Link to="/toolidea" className='nav-link text-whiten dashboardmenulink' aria-current="page">
+                            <button onClick = {goToContactUs} className='nav-link text-start text-white dashboardmenulink w-100' aria-current="page">
                             <FcIdea className='text-white'/>
                             <span className='ms-2 text-white d-none d-sm-inline menuitemfont'>TOOL IDEA</span>
-                            </Link>
+                            </button>
+                        </li>
+
+                        <li className='nav-item text-white  my-1'>
+                            <button onClick={goToSignin} className='nav-link text-start text-white dashboardmenulink w-100' aria-current="page">
+                            <i className='bi bi-box-arrow-left text-white'></i>
+                            <span className='ms-2 text-white d-none d-sm-inline menuitemfont'>LOGOUT</span>
+                            </button>
                         </li>
                     </ul>
                 </div>

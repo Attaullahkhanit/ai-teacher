@@ -10,13 +10,19 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const contactData =
-  {
+  const [loader, setLoader] = useState('false');
+
+  const contactData = {
     name: name,
-    emailaddress: email,
-    messagedet: message
+    email: email,
+    message: message
   }
   console.log(contactData)
+
+  const submitMessage = () => {
+     console.log(contactData)
+     localStorage.setItem('contactData', name)
+  }
 
   const faqpagecarditems1 = [
     {
@@ -78,7 +84,7 @@ function Contact() {
                 <textarea className="form-control" id="exampleFormControlTextarea1" rows="5" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
               </div>
               <div className='py-5'>
-                <button className='btn btn-primary w-100 py-2 fw-bold shadow'><i className="bi bi-send px-2"></i>Submit</button>
+                <button onClick={submitMessage} className='btn btn-primary w-100 py-2 fw-bold shadow'><i className="bi bi-send px-2"></i>Submit</button>
               </div>
             </div>
           </div>

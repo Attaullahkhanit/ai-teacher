@@ -35,7 +35,7 @@ function Pricing() {
           list3: 'Premium Tools',
           list4: 'Access Latest Features',
           list5: 'Pro Storage',
-          btntext: 'Go Pro'
+          btntext: 'GO PRO'
         }
       ]
     const listpricingCard3Data =

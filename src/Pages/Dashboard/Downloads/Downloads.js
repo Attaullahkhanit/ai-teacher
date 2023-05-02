@@ -36,9 +36,9 @@ function Downloads() {
               <div className='fw-bold fs-5'>
                 <p><ImHistory /> <span className=''>Creation Hisotry</span></p>
               </div>
-              <div className='ml-auto'>
+              {/* <div className='ml-auto'>
                 <button type='button' className='btn border-primary py-0 rounded-5 border border-2 text-primary fs-5'><MdOutlineAdd className='fs-3 fw-bolder text-primary pb-1' /><span className='text-dark fw-bold px-1'>Request a New Tool</span></button>
-              </div>
+              </div> */}
             </div>
             <div className='row my-3'>
               <div className='py-3 text-secondary' style={{ fontSize: '14px' }}>Folders</div>
@@ -68,9 +68,9 @@ function Downloads() {
               <div className='py-3 text-secondary' style={{ fontSize: '14px' }}>
                 Recent Creations
               </div>
-              <div className='col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch'>
+              {/* <div className='col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch'>
                 <DocumentFileCard />
-              </div>
+              </div> */}
               <div className='col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch'>
                 <DocumentFileCard2 />
               </div>

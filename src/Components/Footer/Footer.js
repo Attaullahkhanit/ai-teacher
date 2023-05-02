@@ -52,7 +52,7 @@ function Footer() {
 
                     </section>
                 </div>
-                <div className="text-center d-flex flex-row justify-content-between py-lg-3 px-lg-5 py-sm-3 footerbottomtext" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
+                <div className="text-center d-flex flex-row justify-content-between py-lg-3 px-lg-5 py-sm-3 footerbottomtext" style={{backgroundColor: '#000000'}}>
                     <div>
                         © 2023 WebRDev:
                         <Link className="text-primary text-decoration-none px-3   " to="#!"> All Right Reserved</Link>

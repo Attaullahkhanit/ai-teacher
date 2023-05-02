@@ -7,7 +7,7 @@ export default function WywisingEditor(props) {
   return (
     <div className="App">
       <CKEditor
-      style={{height:"100vh"}}
+        style={{height:"100vh"}}
         editor={ClassicEditor}
         data={props.content?props.content:  `<p style="text-align:center; font-weight:bold">Push content</p>`}
         onReady={(editor) => {
